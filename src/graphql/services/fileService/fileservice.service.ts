@@ -1,6 +1,6 @@
 import { accessSync, constants, readdirSync, readFileSync, statSync } from "fs";
 import { extname, join } from "path";
-import { FileDetail, FileMetaData } from "./file.interface";
+import { FileDetail, FileMetaData } from "../../resolvers/files/file.interface";
 
 const isDirectory = (path: string) => statSync(path).isDirectory();
 
@@ -24,7 +24,6 @@ export const getFiles = (path: string) => {
 }
 
 export const getFileDetails = (path: string): FileDetail => {
-
     return {
         size: statSync(path).size,
         createdDate: new Date(statSync(path).birthtime),

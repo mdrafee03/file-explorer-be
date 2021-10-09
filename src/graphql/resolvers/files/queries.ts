@@ -1,4 +1,4 @@
-import { getFileDetails, getFiles } from "./fileservice.service";
+import { getFileDetails, getFiles } from "../../services/fileService/fileservice.service";
 
 const files = [
     {
