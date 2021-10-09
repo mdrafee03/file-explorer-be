@@ -2,5 +2,19 @@
   "name": "file-explorer-be",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc -p .",
+    "start": "NODE_PATH=./dist node dist/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "nodemon": "^2.0.13",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^16.10.3"
+  }
 }

@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  app:
+    container_name: file-explorer-be
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+      target: base
+    environment:
+      NODE_ENV: development 
+    volumes:
+      - ./src:/usr/src/app/src
+      - ./nodemon.json:/usr/src/app/nodemon.json
+    ports:
+      - ${PORT}:${PORT}
+    command: /bin/sh -c "while sleep 1000; do :; done"
