@@ -1,0 +1,13 @@
+type FileDetail {
+    size: Int
+    type: String
+    createdDate: Date
+    canRead: Boolean
+    canWrite: Boolean
+    canExecute: Boolean
+}
+
+type FileMetaData {
+    name: String!
+    isDirectory: Boolean!
+}
