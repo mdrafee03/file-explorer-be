@@ -10,8 +10,7 @@ services:
     environment:
       NODE_ENV: development 
     volumes:
-      - ./src:/usr/src/app/src
+      - ./:/usr/src/app/
       - ./nodemon.json:/usr/src/app/nodemon.json
     ports:
       - ${PORT}:${PORT}
-    command: /bin/sh -c "while sleep 1000; do :; done"
